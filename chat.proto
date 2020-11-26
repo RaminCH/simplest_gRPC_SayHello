@@ -1,0 +1,21 @@
+syntax = "proto3"; //3 versiya protokolirovaniya
+package chat;      // chat  - nazvaniye nashego protokolirovaniya
+
+message Message {  // message - eto vnutrenniy obyekt s nazvaniyem Message
+    string body = 1;    //1-m delom opredelim pole - string s nazvaniyem body kot. ravno 1
+}
+
+//Dalshe propisivayem kak budut ustroyeni nashi servisi
+service ChatService {
+    rpc SayHello(Message) returns(Message) {}
+    rpc SayGoodBye(Message) returns(Message) {} 
+}
+//v moyem service, kot. xochu razrabotat na osnove texnologii rpc, doljna bit realizovana
+    //funksiya SayHello, kotoraya budet prinimat soobsheniye a na vixod davat toje soobsheniye a soobsheniye pod soboy podrazumevayet
+    //nekoye strokovoye pole s nazvaniyem body pod nomerom 1
+
+// dla ustanovki protobuf - v terminale: sudo snap install protobuf --classic
+
+// ramin@raminhost:~/go/src/github.com/RaminCH_self/Go3_gRPC/lec3$ sudo snap install protobuf --classic
+// [sudo] password for ramin: 
+// snap "protobuf" is already installed, see 'snap help refresh'
