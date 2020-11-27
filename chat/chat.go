@@ -6,7 +6,7 @@ import (
 )
 
 //Server
-type Server struct {
+type Server struct { // udovletvorayet interfeysu ->>>> type ChatServiceServer interface {..}, potomu chto tam ne realizovano nichego
 	//...
 }
 
